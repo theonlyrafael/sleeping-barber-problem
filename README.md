@@ -1,2 +1,1 @@
-# sleeping-barber-problem
-A studying of one of the most famous problem in Operational Systems, the Sleeping Barber Problem. Um estudo de um dos problemas mais famosos em Sistemas Operacionais, o Problema do Barbeiro Dorminhoco.
+# Projeto iniciadamente desenvolvido em Março de 2024 para a matéria de Sistemas Operacionais
