@@ -36,11 +36,11 @@ O barbeiro encerra apenas após atender todos os clientes que já estão na fila
 
 Este repositório contém duas implementações do mesmo problema, cada uma com uma abordagem diferente de concorrência.
 
-### `barbeiro_dorminhoco.c` — POSIX
+### `sbp-in-c.c` — POSIX
 
 Utiliza as APIs do sistema operacional POSIX diretamente: `pthread.h` para threads e `semaphore.h` para semáforos. Por depender de chamadas do SO, sua portabilidade está atrelada ao ambiente de execução. Roda nativamente no Linux e em ambientes que emulam POSIX no Windows, como o MinGW-w64 presente no Code::Blocks.
 
-### `barbeiro_dorminhoco.cpp` — Biblioteca Padrão do C++
+### `sbp-in-cpp.c++` — Biblioteca Padrão do C++
 
 Utiliza exclusivamente a biblioteca padrão do C++ (`<thread>`, `<mutex>`, `<condition_variable>`), disponível desde o C++11. O semáforo foi implementado como uma classe própria sobre essas primitivas, eliminando qualquer dependência de API do sistema operacional. O compilador de cada plataforma é responsável por traduzir essas chamadas para o que aquele SO entende: no Linux usa pthreads por baixo dos panos; no Windows usa as APIs nativas. O mesmo código roda em ambos sem nenhuma adaptação.
 
